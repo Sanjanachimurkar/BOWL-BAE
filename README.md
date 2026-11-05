@@ -22,10 +22,11 @@ Bowl Bae sells fresh Indian salad bowls using seasonal vegetables, grains, panee
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React 19 with Vite, JavaScript, Tailwind CSS, Lucide React icons
-- **Backend**: Node.js & Express REST API
-- **Database**: MongoDB with Mongoose (with fallback for testing)
-- **Architecture**: Separate `client` and `server` folders
+- **Frontend**: React 19 with Vite, Tailwind CSS, Framer Motion, and **Bespoke Handcrafted SVG Illustrations** *(Zero Lucide React / third-party icon bloat for maximum performance)*
+- **Styling & Assets**: Custom WebP raster pipeline, JuiceBot typographic design system (`blamo` fonts), and pure SVG artwork
+- **Backend**: Node.js & Express REST API with strict security middleware (Helmet, NoSQL injection prevention, rate limiting, and honeypot protection)
+- **Database**: MongoDB with Mongoose (with automated memory fallback for testing)
+- **Architecture**: Decoupled `client` and `server` architecture with automated API proxying
 
 ---
 
@@ -38,18 +39,21 @@ BOWL BAE/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Navbar.jsx              # Brand logo & editorial overlay navigation
-│   │   │   ├── Hero.jsx                # "Garden Meets Tadka" with large composition
+│   │   │   ├── Hero.jsx                # "Meet Our Salad" top-down artisanal bowl animation
 │   │   │   ├── Story.jsx               # "Fresh, not boring" manifesto
-│   │   │   ├── Freshness.jsx           # "Chopped today. Devoured today" & clock
+│   │   │   ├── Freshness.jsx           # "4 Hours vs. 40 Days" scroll-driven produce gathering
+│   │   │   ├── SaladMotionStage.jsx    # Interactive live bowl layer-toss stage
 │   │   │   ├── Process.jsx             # "Farm. Chop. Tadka. Bowl." 4-step ritual
 │   │   │   ├── Menu.jsx                # 5 Signature Bowls & filters
 │   │   │   ├── BowlModal.jsx           # Nutrition, ingredients, macros & add-to-bag
 │   │   │   ├── CustomizerModal.jsx     # Build Your Own Bowl interactive studio
+│   │   │   ├── RecipesPage.jsx         # Signature salad dressing & meal recipes
 │   │   │   ├── Sourcing.jsx            # Transparent farms & clean kitchen pledge
-│   │   │   ├── Locations.jsx           # Hub locations & delivery radius checker
-│   │   │   ├── CartDrawer.jsx          # Live bag & checkout form
+│   │   │   ├── TopicIllustrations.jsx  # Bespoke handcrafted SVG illustrations (No Lucide)
+│   │   │   ├── Cutouts.jsx             # Organic cutouts & delivery truck graphics
+│   │   │   ├── CartDrawer.jsx          # Live bag, honeypot protection & checkout form
 │   │   │   ├── OrderSuccessModal.jsx   # Real-time kitchen status tracker
-│   │   │   ├── OrderLookupModal.jsx    # Track order by ID (e.g. BAE-2925)
+│   │   │   ├── OrderLookupModal.jsx    # Track order by ID (e.g. BAE-2925) or phone
 │   │   │   ├── Newsletter.jsx          # "The Tadka Dispatch" signup
 │   │   │   └── Footer.jsx              # Editorial footer, allergens, timings
 │   │   ├── data/
