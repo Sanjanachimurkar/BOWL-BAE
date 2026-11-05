@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "Bowl Bae — Fresh Indian Salad Bowls (Garden Meets Tadka)",
   "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "server": "cd server && npm start",
-    "server:dev": "cd server && npm run dev",
-    "client": "cd client && npm run dev",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "npm run build --workspace=client",
+    "client": "npm run dev --workspace=client",
+    "server": "npm start --workspace=server",
+    "server:dev": "npm run dev --workspace=server",
+    "seed": "npm run seed --workspace=server"
   }
 }
