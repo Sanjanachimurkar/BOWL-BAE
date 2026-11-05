@@ -1,0 +1,9 @@
+# Bowl Bae - Robots.txt
+User-agent: *
+Allow: /
+
+# Restrict crawlers from querying internal backend APIs
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://bowlbae.in/sitemap.xml

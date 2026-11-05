@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   JUICEBOT EXACT CUSTOM FONTS & TYPOGRAPHY
+   ========================================================================== */
+
+@font-face {
+  font-family: 'blamo-book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/blamo-book.woff2') format('woff2'),
+       url('/blamo-book.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'blamo-bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/blamo-bold.woff2') format('woff2'),
+       url('/blamo-bold.woff') format('woff');
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --jb-green: #b2bea5;
+    --jb-beige: #e3cba5;
+    --jb-red: #daad9d;
+    --jb-gray: #e1dcd6;
+    --jb-dark: #292929;
+  }
+
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--jb-green);
+    color: var(--jb-dark);
+    font-size: 16px;
+    font-family: 'blamo-book', HelveticaNeue, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    html {
+      font-size: 22px;
+    }
+  }
+
+  body {
+    font-family: 'blamo-book', HelveticaNeue, Helvetica, Arial, sans-serif;
+    color: #292929;
+  }
+
+  ::selection {
+    background-color: #292929;
+    color: #ffffff;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #292929;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Exact JuiceBot bg-texture styling with WebP support */
+.jb-texture {
+  background-image: url('/bg-texture.webp');
+  background-repeat: repeat;
+  background-size: 50% 50%;
+}
+
+/* Exact JuiceBot Headline Typographic Classes */
+.jb-hero-title {
+  font-family: 'blamo-bold', HelveticaNeue-Bold, "Arial Black", sans-serif;
+  font-size: 50px;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .jb-hero-title {
+    font-size: 80px;
+    line-height: 1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .jb-hero-title {
+    font-size: 110px;
+    line-height: 0.95;
+  }
+}
+
+.jb-section-title {
+  font-family: 'blamo-bold', HelveticaNeue-Bold, "Arial Black", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .jb-section-title {
+    font-size: 60px;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .jb-section-title {
+    font-size: 90px;
+  }
+}
+
+.jb-medium-title {
+  font-family: 'blamo-bold', HelveticaNeue-Bold, "Arial Black", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .jb-medium-title {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .jb-medium-title {
+    font-size: 64px;
+  }
+}
+
+.jb-small-title {
+  font-family: 'blamo-bold', HelveticaNeue-Bold, "Arial Black", sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+}
+@media only screen and (min-width: 768px) {
+  .jb-small-title {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .jb-small-title {
+    font-size: 32px;
+  }
+}
+
+.jb-body-text {
+  font-family: 'blamo-book', HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media only screen and (min-width: 768px) {
+  .jb-body-text {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .jb-body-text {
+    font-size: 22px;
+  }
+}
+
+/* Exact JuiceBot Link & Underline */
+.jb-link {
+  font-family: 'blamo-bold', HelveticaNeue-Bold, "Arial Black", sans-serif;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.jb-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease-out;
+}
+
+.jb-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ==========================================================================
+   CONVERGING SALAD MOTION — COMPLETE REWRITE
+   Vegetables start OFF-SCREEN, all fly simultaneously into bowl center,
+   slam with impact shockwave, then gently float/bob inside the bowl.
+   ========================================================================== */
+
+@keyframes textSlideUp {
+  0%   { opacity: 0; transform: translateY(36px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Per-vegetable float — uses CSS custom props --float-duration, --float-delay */
+@keyframes vegFloat {
+  0%   { transform: var(--veg-rest-transform) translateY(0px)   rotate(0deg); }
+  33%  { transform: var(--veg-rest-transform) translateY(-9px)  rotate(1.2deg); }
+  66%  { transform: var(--veg-rest-transform) translateY(5px)   rotate(-0.8deg); }
+  100% { transform: var(--veg-rest-transform) translateY(0px)   rotate(0deg); }
+}
+
+.veg-float {
+  animation: vegFloat var(--float-duration, 4.8s) ease-in-out var(--float-delay, 0s) infinite;
+}
+
+.animate-text-up {
+  animation: textSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Bowl impact shockwave ring */
+@keyframes shockwave {
+  0%   { transform: scale(0.8); opacity: 0.7; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Legacy classes kept for other components that still use them */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(1.5deg); }
+}
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(8px) rotate(-1.5deg); }
+}
+@keyframes bowlImpactReaction {
+  0%   { transform: translateY(0) scale(1); }
+  45%  { transform: translateY(6px) scale(1.03, 0.97); }
+  75%  { transform: translateY(-3px) scale(0.99, 1.01); }
+  100% { transform: translateY(0) scale(1); }
+}
+.animate-float-slow    { animation: floatSlow 4.5s ease-in-out infinite; }
+.animate-float-reverse { animation: floatReverse 5s ease-in-out infinite; }
+.animate-bowl-impact   { animation: bowlImpactReaction 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #b2bea5;
+}
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 9999px;
+  border: 2px solid #b2bea5;
+}

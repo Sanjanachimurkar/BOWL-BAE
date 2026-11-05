@@ -1,0 +1,13 @@
+{
+  "name": "bowl-bae",
+  "version": "1.0.0",
+  "description": "Bowl Bae — Fresh Indian Salad Bowls (Garden Meets Tadka)",
+  "private": true,
+  "scripts": {
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  }
+}

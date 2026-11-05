@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bowl Bae — Fresh Indian salad bowls with big flavour. Raw seasonal crunch awakened by the theatre of sizzling whole spices." />
+    <!-- Security & Referrer Policies -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' http://localhost:5000 http://127.0.0.1:5000 ws: wss:; base-uri 'self'; form-action 'self';" />
+    <title>Bowl Bae — Fresh Indian Salad Bowls | Garden Meets Tadka</title>
+    <!-- Preload exact JuiceBot Blamo font files -->
+    <link rel="preload" href="/blamo-bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/blamo-book.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preload critical above-the-fold LCP images -->
+    <link rel="preload" as="image" href="/cutouts/topdown-bowl-empty.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/cutouts/topdown-salad-assembled.webp" type="image/webp" />
+  </head>
+  <body class="bg-jb-green text-jb-dark font-sans antialiased selection:bg-jb-dark selection:text-white">
+    <div id="root">
+      <!-- Critical Instant Render Shell (Zero-delay FCP for Lighthouse & slow 4G) -->
+      <div style="min-height: 92vh; background-color: #b2bea5; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-top: 4.5rem; padding-bottom: 1.5rem; text-align: center; color: #292929; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <div style="max-width: 48rem; padding: 0 1.5rem; margin-top: 1rem;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; opacity: 0.75; display: block; margin-bottom: 0.25rem;">Fresh • 100% Traceable • Tempered Live</span>
+          <h1 style="font-size: 2.75rem; font-weight: 800; text-transform: uppercase; line-height: 0.95; margin: 0;">Meet Our Salad</h1>
+        </div>
+        <div style="width: 280px; height: 280px; max-width: 90vw; margin: 1rem auto; display: flex; align-items: center; justify-content: center;">
+          <img src="/cutouts/topdown-bowl-empty.webp" alt="Artisanal Earthenware Salad Bowl" width="280" height="280" fetchpriority="high" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div style="height: 3rem;"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
